@@ -1,5 +1,6 @@
 %define	snap	20131226
 Summary:	VA-API implementation for Intel G45 chipsets with H264 support
+Summary(pl.UTF-8):	Implementacja VA-API dla układów Intela z rodziny G45 z obsługą H264
 Name:		libva-driver-intel-g45
 Version:	1.2.2
 Release:	0.%{snap}.1
@@ -19,7 +20,7 @@ BuildRequires:	libva-wayland-devel >= 1.2.0
 BuildRequires:	libva-x11-devel >= 1.2.0
 BuildRequires:	pkgconfig
 # API version, not just package version
-BuildRequires:	libva-devel >= 0.32.0
+BuildRequires:	pkgconfig(libva) >= 0.34.0
 # wayland-client
 BuildRequires:	wayland-devel
 Requires:	libdrm >= 2.4.45
@@ -29,11 +30,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 VA-API implementation for Intel G45 chipsets with H264 support.
 
+%description -l pl.UTF-8
+Implementacja VA-API dla układów Intela z rodziny G45 z obsługą H264.
+
 %prep
 %setup -q -n intel-driver-g45-h264
 
 %build
-autoreconf -i
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
