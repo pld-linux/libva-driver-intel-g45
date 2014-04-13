@@ -1,13 +1,13 @@
-%define	snap	20131226
+%define	snap	20140324
 Summary:	VA-API implementation for Intel G45 chipsets with H264 support
 Summary(pl.UTF-8):	Implementacja VA-API dla układów Intela z rodziny G45 z obsługą H264
 Name:		libva-driver-intel-g45
-Version:	1.2.2
+Version:	1.3.0
 Release:	0.%{snap}.1
 License:	MIT
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/g45h264/intel-driver-g45-h264-%{snap}.tar.gz
-# Source0-md5:	6df697cbb5ac9536e816fd603ded9053
+# Source0-md5:	3cc264b84dbbfd7b604f0cfa716dcd68
 URL:		http://www.freedesktop.org/wiki/Software/vaapi
 BuildRequires:	Mesa-libEGL-devel
 BuildRequires:	autoconf >= 2.57
