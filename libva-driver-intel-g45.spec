@@ -9,7 +9,7 @@ Group:		Libraries
 Source0:	http://downloads.sourceforge.net/g45h264/intel-driver-g45-h264-%{snap}.tar.gz
 # Source0-md5:	3cc264b84dbbfd7b604f0cfa716dcd68
 URL:		http://www.freedesktop.org/wiki/Software/vaapi
-BuildRequires:	Mesa-libEGL-devel
+BuildRequires:	EGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	libdrm-devel >= 2.4.45
@@ -19,6 +19,7 @@ BuildRequires:	libva-drm-devel >= 1.2.0
 BuildRequires:	libva-wayland-devel >= 1.2.0
 BuildRequires:	libva-x11-devel >= 1.2.0
 BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(egl)
 # API version, not just package version
 BuildRequires:	pkgconfig(libva) >= 0.34.0
 # wayland-client
